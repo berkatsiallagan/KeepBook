@@ -81,6 +81,9 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="mt-4 text-sm text-red-600 italic">
+                * Harap kembalikan buku tepat waktu dan konfirmasi kepada admin untuk memperbarui status peminjaman Anda.
+            </div>
         </div>
     @endif
 </div>

@@ -18,6 +18,15 @@ class PeminjamanTableSeeder extends Seeder
                 'status' => 'dikembalikan',
                 'created_at' => now(),
                 'updated_at' => now(),
+            ],
+            [
+                'user_id' => 3,
+                'buku_id' => 7,
+                'tanggal_pinjam' => '2025-06-15',
+                'tanggal_kembali' => '',
+                'status' => 'dipinjam',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }
