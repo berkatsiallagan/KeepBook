@@ -10,7 +10,7 @@ use App\Models\Peminjaman;
  * Removing the usage and import of ActivityLog to fix the error.
  */
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -208,7 +208,7 @@ class AdminController extends Controller
 
         User::create([
             'username' => $request->username,
-            'password' => Hash::make($request->password),
+            'password' => md5($request->password), // <- pakai md5
             'nama' => $request->nama,
             'role' => $request->role
         ]);
@@ -239,8 +239,8 @@ class AdminController extends Controller
         ];
 
         if ($request->password) {
-            $data['password'] = Hash::make($request->password);
-        }
+            $data['password'] = md5($request->password);
+        }        
 
         $user->update($data);
 
